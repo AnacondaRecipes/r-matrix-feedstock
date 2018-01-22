@@ -10,8 +10,8 @@ package:
 source:
   fn: Matrix_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/Matrix_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/Matrix/Matrix_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Matrix_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/Matrix/Matrix_{{ version }}.tar.gz
   sha256: 16e51aef69dca94dc4fcba8aa35a0039d9d0e6abd9cc017c095e954e1e2ca4f2
 
 
