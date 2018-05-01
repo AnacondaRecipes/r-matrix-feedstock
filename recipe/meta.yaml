@@ -1,4 +1,4 @@
-{% set version = '1.2-12' %}
+{% set version = '1.2-14' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/Matrix_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/Matrix/Matrix_{{ version }}.tar.gz
-  sha256: 16e51aef69dca94dc4fcba8aa35a0039d9d0e6abd9cc017c095e954e1e2ca4f2
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 49a6403547b66675cb44c1afb04bb87130c054510cb2b94971435a826ab41396
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -75,15 +69,15 @@ extra:
 # The original CRAN metadata for this package was:
 
 # Package: Matrix
-# Version: 1.2-12
-# Date: 2017-11-16
+# Version: 1.2-14
+# Date: 2018-04-06
 # Priority: recommended
 # Title: Sparse and Dense Matrix Classes and Methods
 # Contact: Doug and Martin <Matrix-authors@R-project.org>
 # Maintainer: Martin Maechler <mmaechler+Matrix@gmail.com>
 # Authors@R: c(person("Douglas","Bates", role="aut") , person("Martin","Maechler", email="mmaechler+Matrix@gmail.com", role = c("aut","cre")) , person("Timothy A.", "Davis", role="ctb", comment = c("SuiteSparse and 'cs' C libraries, notably CHOLMOD, AMD; collaborators listed in dir(pattern = '^[A-Z]+[.]txt$', full.names=TRUE, system.file('doc', 'SuiteSparse', package='Matrix'))")) , person("Jens", "Oehlschlagel", role="ctb", comment="initial nearPD()") , person("Jason", "Riedy", role="ctb", comment = c("condest() and onenormest() for octave", "Copyright: Regents of the University of California")) , person("R Core Team", role = "ctb", comment="base R matrix implementation") )
 # Description: A rich hierarchy of matrix classes, including triangular, symmetric, and diagonal matrices, both dense and sparse and with pattern, logical and numeric entries.   Numerous methods for and operations on these matrices, using 'LAPACK' and 'SuiteSparse' libraries.
-# Depends: R (>= 3.0.1)
+# Depends: R (>= 3.2.0)
 # Imports: methods, graphics, grid, stats, utils, lattice
 # Suggests: expm, MASS
 # Enhances: MatrixModels, graph, SparseM, sfsmisc
@@ -93,11 +87,12 @@ extra:
 # BuildResaveData: no
 # License: GPL (>= 2) | file LICENCE
 # URL: http://Matrix.R-forge.R-project.org/
+# BugReports: https://r-forge.r-project.org/tracker/?group_id=61
 # NeedsCompilation: yes
-# Packaged: 2017-11-16 14:56:25 UTC; maechler
+# Packaged: 2018-04-06 21:34:14 UTC; maechler
 # Author: Douglas Bates [aut], Martin Maechler [aut, cre], Timothy A. Davis [ctb] (SuiteSparse and 'cs' C libraries, notably CHOLMOD, AMD; collaborators listed in dir(pattern = '^[A-Z]+[.]txt$', full.names=TRUE, system.file('doc', 'SuiteSparse', package='Matrix'))), Jens Oehlschlagel [ctb] (initial nearPD()), Jason Riedy [ctb] (condest() and onenormest() for octave, Copyright: Regents of the University of California), R Core Team [ctb] (base R matrix implementation)
 # Repository: CRAN
-# Date/Publication: 2017-11-16 16:04:57
+# Date/Publication: 2018-04-09 17:10:53 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
