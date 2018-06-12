@@ -35,11 +35,15 @@ requirements:
   host:
     - r-base
     - r-lattice
+    # Not exactly sure why this is not needed on Linux too.
+    - libopenblas                # [osx]
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-lattice
+    # Not exactly sure why this is not needed on Linux too.
+    - libopenblas                # [osx]
 
 test:
   commands:
